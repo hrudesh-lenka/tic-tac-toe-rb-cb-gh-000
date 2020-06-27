@@ -75,8 +75,8 @@ describe './lib/tic_tac_toe.rb' do
 
     it 'allows "X" player in the bottom right and "O" in the top left ' do
       board = [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ']
-      move(board, 0, 'O')
-      move(board, 8, 'X')
+      move(board, 1, 'O')
+      move(board, 9, 'X')
       expect(board).to eq(['O', ' ', ' ', ' ', ' ', ' ', ' ', ' ', 'X'])
     end
   end
@@ -103,7 +103,7 @@ describe './lib/tic_tac_toe.rb' do
     it 'returns true/false based on position' do
       board = [' ', ' ', ' ', ' ', 'X', ' ', ' ', ' ', ' ']
 
-      position = 0
+      position = 1
       expect(valid_move?(board, position)).to be_truthy
 
       position = 4
